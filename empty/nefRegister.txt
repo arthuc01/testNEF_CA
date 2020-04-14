@@ -1,0 +1,61 @@
+						Xplor fold		Yasara fold	ASN/GLN code	LEU/VAL code
+
+1pqx.nef	2	87			ok			ok		1 only		1 only
+
+2jr2.nef	2	2x 76	dimer		ish					1 and 2		1 and 2
+
+2juw.nef	2	2x 80	dimer							1 only		1 and 2
+
+2k2e.nef	2	158						ok		2 only
+
+2kcu.nef	2	166						ok-ish		2 only
+
+2kko.nef	2	2x 108	dimer
+
+2ko1.nef	2	2x 83	dimer
+
+2ko7.nef*	2	175						...
+
+2kpu.nef	2	96						ok			
+
+2kw5.nef	4	202	RDCs x2
+
+2kzn.nef	3	147	RDC 		(e) not great		bad**				
+
+2loy.nef	3	183	RDCs							1 and 2
+
+2luz.nef	2	182						@work		
+
+2png.nef	1	89	no dihedrals	(e) ok					no codes
+
+6nbn.nef	2	123	ligand							1 only
+
+
+Comments:
+2ko7.nef* - this should really be 2k07
+
+(e) - fold protocol was modified by me from other Xplor file
+
+bad** - this protein had very small number of NOEs, Yasara only used NOE, therefore could not (realistically) come up with sensible structure, results for "onGitHub" and "the/tyr fixed" are similar
+
+
+Pymol alignment regions (both tested structures aligned to PDB deposited):
+
+1pqx.nef	1-6+13-19+28-93/c+ca+cb+n+o	
+2jr2.nef		
+2juw.nef	
+2k2e.nef	
+2kcu.nef	8-62+69-136+149-152/c+ca+cb+n+o
+2kko.nef	
+2ko1.nef	
+2ko7.nef	
+2kpu.nef	
+2kw5.nef	
+2kzn.nef	
+2loy.nef	
+2luz.nef	6-141+166-180/ca+cb+c+n+o
+2png.nef	
+6nbn.nef	
+
+python fixNef_pd.py fileroot 0 nonuclear/nuclear > fileroot_NEW.log
+fileroot - name of the file without .nef
